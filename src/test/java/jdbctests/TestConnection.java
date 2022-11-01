@@ -35,9 +35,7 @@ public class TestConnection {
         System.out.println(resultSet.getInt(1)+ " - " +resultSet.getString(2) );
 
         while (resultSet.next()){
-
             System.out.println(resultSet.getInt(1)+ " - " +resultSet.getString(2) );
-
         }
 
 
