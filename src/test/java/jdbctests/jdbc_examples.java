@@ -22,7 +22,7 @@ public class jdbc_examples {
 //        resultSet.next();
 //
 //        System.out.println(resultSet.getString(2));
-//        //display departments table in 10 - Administration - 200 - 1700 format
+//        //display departments table in 10 - Administration - 200 - 1700 formatz
 
 
         //code for iterating for each row
