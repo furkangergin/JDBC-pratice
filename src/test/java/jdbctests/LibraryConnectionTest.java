@@ -43,4 +43,17 @@ public class LibraryConnectionTest {
 
         DBUtils.destroy();
     }
+    @Test
+    public void test3(){
+        String dbUrl = "jdbc:oracle:thin:@54.160.179.72:1521:XE";
+        String dbUsername = "hr";
+        String dbPassword = "hr";
+
+        DBUtils.createConnection(dbUrl,dbUsername,dbPassword);
+
+        System.out.println("DBUtils.getQueryResultMap(\"select * from DEPARTMENTS\") = " + DBUtils.getQueryResultMap("select * from DEPARTMENTS"));
+
+
+        DBUtils.destroy();
+    }
 }

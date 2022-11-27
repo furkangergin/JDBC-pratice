@@ -11,7 +11,7 @@ public class TestConnection {
         String dbPassword = "hr";
 
         Connection connection = DriverManager.getConnection(dbURL,dbUsername,dbPassword);
-        Statement statement = connection.createStatement();
+        Statement statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
         ResultSet resultSet = statement.executeQuery("SELECT*FROM regions");
 
         //next()---> move pointer to first row
@@ -33,6 +33,8 @@ public class TestConnection {
         //move to third row
         resultSet.next();
         System.out.println(resultSet.getInt(1)+ " - " +resultSet.getString(2) );
+
+        resultSet.beforeFirst();
 
         while (resultSet.next()){
             System.out.println(resultSet.getInt(1)+ " - " +resultSet.getString(2) );
